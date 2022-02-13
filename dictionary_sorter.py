@@ -13,8 +13,10 @@ for element in word_list:
 textfile.close()
 #open a new empty file
 sortedwords = open("sortedwords.txt", "w")
+#sort the words and add to a new file
 with open("words.txt", "r") as r:
 	for line in sorted(r):
 		sortedwords.write(line)
 		print(line,end='')
+#delete the old file of unsorted words
 os.remove("words.txt")
